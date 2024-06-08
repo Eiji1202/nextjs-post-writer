@@ -42,6 +42,13 @@ export default function MobileNav() {
           >
             <Link href="/#feature">特徴</Link>
           </Button>
+          <Button
+            asChild
+            variant="ghost"
+            className="flex justify-start py-1"
+          >
+            <Link href="/#contact">お問い合わせ</Link>
+          </Button>
         </div>
       </DropdownMenuContent>
     </DropdownMenu>

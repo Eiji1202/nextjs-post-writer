@@ -7,6 +7,11 @@ export type SiteConfig = {
     x: string;
     github: string;
   };
+  keywords: string[];
+  authors: {
+    name: string;
+    url: string;
+  }[];
 };
 
 export type NavItem = {
