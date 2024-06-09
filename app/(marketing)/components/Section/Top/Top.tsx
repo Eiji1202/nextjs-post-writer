@@ -8,8 +8,8 @@ export default function Top() {
       <div className="container flex flex-col gap-4 items-center max-w-[1024px]">
         <Button
           asChild
-          variant="secondary"
-          className="rounded-full font-bold"
+          variant="outline"
+          className="font-bold"
         >
           <Link
             href={siteConfig.links.x}

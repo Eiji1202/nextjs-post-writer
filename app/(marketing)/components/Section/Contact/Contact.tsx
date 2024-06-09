@@ -15,8 +15,8 @@ export default function Contact() {
         </p>
         <Button
           asChild
-          variant="secondary"
-          className="rounded-full font-bold"
+          variant="outline"
+          className="font-bold"
         >
           <Link
             href={siteConfig.links.x}
