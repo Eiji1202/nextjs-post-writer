@@ -10,11 +10,12 @@ const notoSansJp = Noto_Sans_JP({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
-    template: `%s | ${siteConfig.name}`
+    template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
   keywords: siteConfig.keywords,
   authors: siteConfig.authors,
+  metadataBase: new URL(siteConfig.url),
   openGraph: {
     type: "website",
     locale: "ja_JP",

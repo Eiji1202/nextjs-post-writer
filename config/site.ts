@@ -9,7 +9,16 @@ export const siteConfig: SiteConfig = {
     x: "https://x.com/ET_1202",
     github: "https://github.com/Eiji1202",
   },
-  keywords: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn/ui", "Supabase", "Prisma", "NextAuth.js", "ReactHookForm"],
+  keywords: [
+    "Next.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "Shadcn/ui",
+    "Supabase",
+    "Prisma",
+    "NextAuth.js",
+    "ReactHookForm",
+  ],
   authors: [
     {
       name: "Eiji",

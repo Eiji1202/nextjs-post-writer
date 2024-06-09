@@ -10,7 +10,7 @@ export default function Feature() {
           </h2>
           <p className="text-center whitespace-pre-line text-muted-foreground text-sm md:text-lg lg:text-xl leading-normal max-w-[672px]">
             {`このプロジェクトは、モダンな技術スタックを使って作られたWebアプリケーションです。
-            Next.js AppRouterやcontentLayerを利用して、マークダウン形式でブログ投稿ができます。`}
+            Next.js AppRouterやContentlayerを利用して、マークダウン形式でブログ投稿ができます。`}
           </p>
         </div>
         <StackCards />
