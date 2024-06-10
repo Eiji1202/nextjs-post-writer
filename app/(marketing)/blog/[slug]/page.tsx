@@ -13,10 +13,14 @@ async function getPostFromSlug(slug: string) {
   return post;
 }
 
-export async function generateMetadata({params}: {params: {slug: string}}):Promise<Metadata> {
-  const page = await getPostFromSlug(params.slug)
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const page = await getPostFromSlug(params.slug);
 
-  if(!page) return {}
+  if (!page) return {};
 
   return {
     title: page.title,
@@ -25,7 +29,7 @@ export async function generateMetadata({params}: {params: {slug: string}}):Promi
       title: page.title,
       description: page.description,
       siteName: siteConfig.name,
-      type: 'article',
+      type: "article",
       url: `https://example.com/blog/${page.slug}`,
       images: {
         url: page.image,
@@ -34,7 +38,7 @@ export async function generateMetadata({params}: {params: {slug: string}}):Promi
         alt: page.title,
       },
     },
-  }
+  };
 }
 
 export default async function PostPage({

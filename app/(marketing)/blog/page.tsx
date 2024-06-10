@@ -14,7 +14,7 @@ export default function BlogPage() {
           <h1 className="font-extrabold text-2xl md:text-3xl lg:text-4xl">
             Blog
           </h1>
-          <p className="whitespace-pre-line text-muted-foreground text-sm md:text-lg lg:text-xl leading-normal">
+          <p className="text-muted-foreground text-sm md:text-lg lg:text-xl leading-normal">
             ContentlayerとMDXで書いてます。
           </p>
         </div>
