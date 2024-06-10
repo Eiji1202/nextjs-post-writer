@@ -65,15 +65,15 @@ export default function StackCards() {
       <Card className="p-4 space-y-1">
         <Image
           src="next-auth.svg"
-          alt="auth.js"
+          alt="NextAuth.js"
           width={50}
           height={50}
         />
         <CardTitle className="text-lg md:text-xl lg:text-2xl">
-          Auth.js
+          NextAuth.js
         </CardTitle>
         <CardDescription className="text-xs md:text-sm">
-          認証にはAuth.jsを使用
+          認証にはNextAuth.jsを使用
         </CardDescription>
       </Card>
       <Card className="p-4 space-y-1">

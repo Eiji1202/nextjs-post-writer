@@ -16,7 +16,7 @@ export const siteConfig: SiteConfig = {
     "Shadcn/ui",
     "Supabase",
     "Prisma",
-    "Auth.js",
+    "NextAuth.js",
     "ReactHookForm",
   ],
   authors: [
