@@ -1,9 +1,26 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { signIn } from "next-auth/react";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function UserAuthForm() {
+  const [isLoadingSignInGitHub, setIsLoadingSignInGitHub] = useState(false);
+  const [isLoadingSignInGoogle, setIsLoadingSignInGoogle] = useState(false);
+
+  const signInGoogle = async () => {
+    setIsLoadingSignInGoogle(true);
+    await signIn("google");
+    setIsLoadingSignInGoogle(false);
+  };
+  const signInGithub = async () => {
+    setIsLoadingSignInGitHub(true);
+    await signIn("github");
+    setIsLoadingSignInGitHub(false);
+  };
   return (
     <div>
       <form className="space-y-2">
@@ -37,18 +54,60 @@ export default function UserAuthForm() {
           </span>
           <div className="flex-grow border-t"></div>
         </div>
-        <Button
-          variant="outline"
-          className="w-full flex items-center gap-2"
-        >
-          <Image
-            src="github.svg"
-            alt="github"
-            width={20}
-            height={20}
-          />
-          <span>GitHub</span>
-        </Button>
+        <div className="space-y-2">
+          <Button
+            variant="outline"
+            className="w-full flex items-center gap-2"
+            onClick={signInGithub}
+            disabled={isLoadingSignInGitHub}
+          >
+            {!isLoadingSignInGitHub ? (
+              <>
+                <Image
+                  src="github.svg"
+                  alt="github"
+                  width={20}
+                  height={20}
+                />
+                <span>GitHub</span>
+              </>
+            ) : (
+              <Image
+                src="loader.svg"
+                alt="loading"
+                width={20}
+                height={20}
+                className="animate-spin"
+              />
+            )}
+          </Button>
+          <Button
+            variant="outline"
+            className="w-full flex items-center gap-2"
+            onClick={signInGoogle}
+            disabled={isLoadingSignInGoogle}
+          >
+            {!isLoadingSignInGoogle ? (
+              <>
+                <Image
+                  src="google.svg"
+                  alt="google"
+                  width={22}
+                  height={22}
+                />
+                <span>Google</span>
+              </>
+            ) : (
+              <Image
+                src="loader.svg"
+                alt="loading"
+                width={20}
+                height={20}
+                className="animate-spin"
+              />
+            )}
+          </Button>
+        </div>
       </div>
     </div>
   );
