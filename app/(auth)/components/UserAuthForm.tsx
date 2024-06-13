@@ -7,7 +7,12 @@ import { signIn } from "next-auth/react";
 import Image from "next/image";
 import { useState } from "react";
 
-export default function UserAuthForm() {
+type Props = {
+  buttonLabel: string;
+};
+
+export default function UserAuthForm(props: Props) {
+  const { buttonLabel } = props;
   const [isLoadingSignInGitHub, setIsLoadingSignInGitHub] = useState(false);
   const [isLoadingSignInGoogle, setIsLoadingSignInGoogle] = useState(false);
 
@@ -42,7 +47,7 @@ export default function UserAuthForm() {
           type="submit"
           className="w-full"
         >
-          ログイン
+          {buttonLabel}
         </Button>
       </form>
 
@@ -61,25 +66,25 @@ export default function UserAuthForm() {
             onClick={signInGithub}
             disabled={isLoadingSignInGitHub}
           >
-            {!isLoadingSignInGitHub ? (
-              <>
+            <>
+              {isLoadingSignInGitHub ? (
+                <Image
+                  src="loader.svg"
+                  alt="loading"
+                  width={20}
+                  height={20}
+                  className="animate-spin"
+                />
+              ) : (
                 <Image
                   src="github.svg"
                   alt="github"
                   width={20}
                   height={20}
                 />
-                <span>GitHub</span>
-              </>
-            ) : (
-              <Image
-                src="loader.svg"
-                alt="loading"
-                width={20}
-                height={20}
-                className="animate-spin"
-              />
-            )}
+              )}
+              <span>GitHub</span>
+            </>
           </Button>
           <Button
             variant="outline"
@@ -87,25 +92,25 @@ export default function UserAuthForm() {
             onClick={signInGoogle}
             disabled={isLoadingSignInGoogle}
           >
-            {!isLoadingSignInGoogle ? (
-              <>
+            <>
+              {isLoadingSignInGoogle ? (
+                <Image
+                  src="loader.svg"
+                  alt="loading"
+                  width={20}
+                  height={20}
+                  className="animate-spin"
+                />
+              ) : (
                 <Image
                   src="google.svg"
                   alt="google"
                   width={22}
                   height={22}
                 />
-                <span>Google</span>
-              </>
-            ) : (
-              <Image
-                src="loader.svg"
-                alt="loading"
-                width={20}
-                height={20}
-                className="animate-spin"
-              />
-            )}
+              )}
+              <span>Google</span>
+            </>
           </Button>
         </div>
       </div>
