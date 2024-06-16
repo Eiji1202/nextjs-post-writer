@@ -2,11 +2,10 @@
 
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import React, { useState } from "react";
-import { ModeToggle } from "./partials/ModeToggle";
-import { Menu } from "lucide-react";
+import React from "react";
 import MobileNav from "./partials/MoblieNav";
 import { siteConfig } from "@/config/site";
+import { ModeToggle } from "@/components/ui/ModeToggle";
 
 export default function Header() {
   return (

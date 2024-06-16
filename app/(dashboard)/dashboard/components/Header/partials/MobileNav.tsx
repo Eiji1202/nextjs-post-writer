@@ -5,6 +5,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { dashboardConfig } from "@/config/dashboard";
 import { siteConfig } from "@/config/site";
 import { Menu } from "lucide-react";
 import Link from "next/link";
@@ -26,27 +27,16 @@ export default function MobileNav() {
         </Button>
         <DropdownMenuSeparator className="mx-1" />
         <div className="flex flex-col">
-          <Button
-            asChild
-            variant="ghost"
-            className="flex justify-start py-1"
-          >
-            <Link href="/blog">ブログ</Link>
-          </Button>
-          <Button
-            asChild
-            variant="ghost"
-            className="flex justify-start py-1"
-          >
-            <Link href="/#feature">特徴</Link>
-          </Button>
-          <Button
-            asChild
-            variant="ghost"
-            className="flex justify-start py-1"
-          >
-            <Link href="/#contact">お問い合わせ</Link>
-          </Button>
+          {dashboardConfig.nav.map((item, index) => (
+            <Button
+              asChild
+              variant="ghost"
+              className="flex justify-start py-1"
+              key={index}
+            >
+              <Link href={item.href}>{item.title}</Link>
+            </Button>
+          ))}
         </div>
       </DropdownMenuContent>
     </DropdownMenu>
