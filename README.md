@@ -12,6 +12,11 @@
 - サーバー側のformのバリデーションはzod
 - ブログの記事はEditor.jsで作成
 
+## 個人的に工夫した点
+- Headerにblurをかけて、すりガラスのようなUIにした（Shadcn/uiの公式ドキュメントを参考に実装）
+- package.jsonにsvgアイコンを最適化するコマンドを登録して実行できるようにした（`"svgo": "svgo -f ./public -o ./public"`）
+- LightモードとDarkモードを切り替えれるようにした
+
 ## 実装後の画面
 
 > **TOPページ**
