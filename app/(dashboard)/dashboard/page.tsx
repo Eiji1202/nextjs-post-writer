@@ -1,5 +1,4 @@
 import React from "react";
-import DashboardShell from "./components/DashboardShell";
 import DashboardHeader from "./components/DashboardHeader";
 import PostCreateButton from "./components/PostCreateButton";
 import { db } from "@/lib/db";
@@ -31,7 +30,7 @@ export default async function DashboardPage() {
       >
         <PostCreateButton />
       </DashboardHeader>
-      {posts.length >= 0 ? (
+      {posts.length >= 1 ? (
         <div className="border rounded-md divide-y shadow">
           {posts.map((post) => (
             <PostItem

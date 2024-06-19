@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { ToastAction } from "@/components/ui/toast";
 import { toast } from "@/components/ui/use-toast";
 import { FilePlus } from "lucide-react";
 import Image from "next/image";
@@ -32,6 +33,9 @@ export default function PostCreateButton() {
         title: "問題が発生しました。",
         description: "投稿が作成されませんでした。もう一度お試しください。",
         variant: "destructive",
+        action: (
+          <ToastAction altText="もう一度確かめる">もう一度確かめる</ToastAction>
+        ),
       });
     }
 
