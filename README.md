@@ -17,6 +17,10 @@
 - package.jsonにsvgアイコンを最適化するコマンドを登録して実行できるようにした（`"svgo": "svgo -f ./public -o ./public"`）
 - LightモードとDarkモードを切り替えれるようにした
 
+## 所感
+いろんな技術を使って実装して勉強になった。
+個人開発だからいろんな技術を使ったけど、実際にアプリ開発をする際にDBでSupabaseを使うなら認証もSupabaseでやっちゃうと思う。
+
 ## 実装後の画面
 
 > **TOPページ**
@@ -39,7 +43,3 @@ https://github.com/Eiji1202/nextjs-post-writer/assets/100111462/157ab245-a100-49
 
 https://github.com/Eiji1202/nextjs-post-writer/assets/100111462/1b147121-2dbb-45d1-82c9-eb0ec1a18c98
 
-
-## 所感
-いろんな技術を使って実装して勉強になった。
-個人開発だからいろんな技術を使ったけど、実際にアプリ開発をする際にDBでSupabaseを使うなら認証もSupabaseでやっちゃうと思う。
